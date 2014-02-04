@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-UserName=lapps
-DataBase=servicegrid
+#UserName=lapps
+#DataBase=servicegrid
 
 while [[ $UserName == "" ]];
 do
