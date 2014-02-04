@@ -25,10 +25,10 @@ sql "drop database if exists ${database}"
 // Create Role if not exist
 
 def create_role = """
-IF NOT EXISTS ( SELECT 1 FROM pg_roles WHERE rolname='${rolename}' )
-BEGIN
+SELECT 1 FROM pg_roles WHERE rolname='${rolename}';
+IF NOT FOUND THEN
     CREATE ROLE '${rolename}' WITH USER '${rolename}' PASSWORD ${password}
-END
+END IF;
 """
 
 sql create_role
