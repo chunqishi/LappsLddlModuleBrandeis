@@ -19,7 +19,7 @@ rolename='langrid'
 password='langrid'
 
 comment 'Dropping the existing database.'
-sql "drop database if exists '${database}'"
+sql "drop database if exists ${database}"
 
 
 // Create Role if not exist
@@ -35,7 +35,7 @@ sql create_role
 
 // The SQL required to create the database.
 def create_stmt = """
-CREATE DATABASE '${database}'
+CREATE DATABASE ${database}
   WITH OWNER = '${rolename}'
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
