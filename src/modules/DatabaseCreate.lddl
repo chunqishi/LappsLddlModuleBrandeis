@@ -26,7 +26,7 @@ sql "drop database if exists ${database}"
 
 def create_role = """
 DROP ROLE IF EXISTS ${rolename};
-CREATE ROLE ${rolename} WITH USER ${rolename} PASSWORD ${password}
+CREATE ROLE ${rolename} WITH USER ${rolename} PASSWORD '${password}';
 """
 
 sql create_role
