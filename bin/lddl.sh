@@ -3,8 +3,13 @@
 ##  A simple linux command line to run java class or testcase class.
 #
 
-CurDir=$(dirname $0)
+
+
+pushd `dirname $0` > /dev/null
+CurDir=$(pwd -P)
+popd > /dev/null
 CD=$(pwd)
+
 cd $CurDir
 HomeDir=$(dirname $CurDir)
 LibDir=$HomeDir/lib
@@ -36,7 +41,7 @@ fi
 
 else
   echo "LDDL $Lddl not exist. "
-  find $CurDir -name "*.lddl"
+  find $HomeDir -name "*.lddl"
 fi
 
 cd $CD
