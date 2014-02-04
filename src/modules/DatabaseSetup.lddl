@@ -12,6 +12,7 @@ include 'Config'
 include 'Database'
 
 scriptDir = new File(getClass().protectionDomain.codeSource.location.path).parent
+println scriptDir
 
 sql new File(scriptDir,'create_indices.sql').text
 sql new File(scriptDir,'create_storedproc.sql').text
