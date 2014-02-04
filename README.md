@@ -1,4 +1,4 @@
-LappsLddlModuleBrandeis
+Lapps LDDL Module
 =======================
 
-Modules for Lapps Lddl
+Modules for Lapps LDDL
