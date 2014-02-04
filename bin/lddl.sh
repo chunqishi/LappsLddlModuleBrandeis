@@ -10,7 +10,7 @@ CurDir=$(pwd -P)
 popd > /dev/null
 CD=$(pwd)
 
-cd $CurDir
+#cd $CurDir
 HomeDir=$(dirname $CurDir)
 LibDir=$HomeDir/lib
 echo $LibDir
@@ -44,4 +44,4 @@ else
   find $HomeDir -name "*.lddl"
 fi
 
-cd $CD
+#cd $CD
