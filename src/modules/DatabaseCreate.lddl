@@ -14,27 +14,30 @@ postgres {
     password 'postgres'
 }
 
+database=langrid
+rolename=langrid
+password=langrid
+
 comment 'Dropping the existing database.'
-sql 'drop database if exists langrid'
+sql 'drop database if exists ${database}'
+
+
+// Create Role if not exist
+
+def create_role = """
+IF DATABASE_PRINCIPAL_ID(${rolename}) IS NULL
+BEGIN
+    CREATE ROLE ${rolename} WITH USER ${rolename} PASSWORD ${password}
+END
+"""
 
 
 // The SQL required to create the database.
 def create_stmt = """
-CREATE DATABASE langrid
-  WITH OWNER = langrid
+CREATE DATABASE ${database}
+  WITH OWNER = ${rolename}
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
-       CONNECTION LIMIT = -1;
-"""
-
-// The original create statement.
-def old_create_stmt = """
-CREATE DATABASE langrid
-  WITH OWNER = langrid
-       ENCODING = 'UTF8'
-       TABLESPACE = pg_default
-       LC_COLLATE = 'C'
-       LC_CTYPE = 'C'
        CONNECTION LIMIT = -1;
 """
 
