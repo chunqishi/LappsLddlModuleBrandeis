@@ -14,9 +14,9 @@ postgres {
     password 'postgres'
 }
 
-database=langrid
-rolename=langrid
-password=langrid
+database='langrid'
+rolename='langrid'
+password='langrid'
 
 comment 'Dropping the existing database.'
 sql 'drop database if exists ${database}'
@@ -31,6 +31,7 @@ BEGIN
 END
 """
 
+sql create_role
 
 // The SQL required to create the database.
 def create_stmt = """
