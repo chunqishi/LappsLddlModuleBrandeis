@@ -1,6 +1,7 @@
 /*
  * A modular LDDL script for configuring the base LAPPS types and interfaces.
  */
+include 'Cleanup'
 include 'Config'
 include 'Database'
 include 'Domains'
