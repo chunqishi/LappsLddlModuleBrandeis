@@ -52,6 +52,16 @@ services = [
       lang:'en-US',
       license:License
     ],
+
+    [
+      id:'test',
+      name:'test',
+      url:"http://eldrad.cs-i.brandeis.edu:8080/opennlp-web-service/services/POSTagger  ",
+      desc:'test',
+      lang:'en-US',
+      license:License
+    ],
+
 ]
 
 
