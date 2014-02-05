@@ -18,6 +18,7 @@ database='langrid'
 rolename='langrid'
 password='langrid'
 
+
 comment 'Dropping the existing database.'
 sql "drop database if exists ${database}"
 

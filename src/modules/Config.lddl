@@ -5,7 +5,7 @@
  */
 
 /* Each institution should set their own copyright notice. */
-COPYRIGHT = 'Copyright 2014 American National Corpus'
+COPYRIGHT = 'Copyright 2014, Brandeis University'
 
 
 /* Everyone on the LAPPS grid should use the same domain. */

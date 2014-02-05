@@ -20,14 +20,14 @@ serviceMetaAttribute {
 }
 
 serviceType {
-	id DATASOURCE
+	id 'service.type.datasource'
 	name 'LAPPS Datasource'
 	domain DOMAIN
 	description 'Services that provide data to other services.'
 }
 
 serviceType {
-	id SERVICE
+	id 'service.type.processor'
 	name 'LAPPS Web Service'
 	domain DOMAIN
 	description 'LAPPS web services.'
