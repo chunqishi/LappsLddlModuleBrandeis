@@ -7,7 +7,7 @@ include 'Database'
 
 serviceMetaAttribute {
 	id 'service.meta.lang'
-	name 'Service language'
+	name 'Service supported languages'
 	domain DOMAIN
 	description 'The language(s) the service is able to process.'
 }
