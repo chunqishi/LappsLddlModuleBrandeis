@@ -15,10 +15,10 @@ include 'Database'
 sqlIndices='create_indices.sql'
 sqlStoredproc='create_storedproc.sql'
 
-import static groovy.io.FileType.FILES
+
 
 // println new File('.').getAbsolutePath()
-
+import static groovy.io.FileType.FILES
 new File('.').eachFileRecurse(FILES) {
     // println it.name
     if(it.name.endsWith(sqlIndices)) {

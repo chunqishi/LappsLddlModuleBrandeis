@@ -10,6 +10,7 @@ include 'Database'
 wsdlWebService='WebService.wsdl'
 wsdlDataSource='Datasource.wsdl'
 
+import static groovy.io.FileType.FILES
 new File('.').eachFileRecurse(FILES) {
     if(it.name.endsWith(wsdlWebService))
         wsdlWebService = it.getAbsolutePath()
