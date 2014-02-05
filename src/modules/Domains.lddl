@@ -5,6 +5,8 @@
 include 'Config'
 include 'Database'
 
+DOMAIN = 'lapps.nlp'
+
 domain {
 	id DOMAIN
 	name 'Natural Language Processing'
