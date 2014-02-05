@@ -20,6 +20,7 @@ data = [
     [table:'resourcetype_resourcemetaattribute', column:'resourcetype_domainid', value:DOMAIN],
     [table:'resourcemetaattribute', column:'domainid', value:DOMAIN],
     [table:'resourcetype', column:'domainid', value:DOMAIN],
+    [table:'resourcetype', column:'domainid', value:'nict.nlp'],
     [table:'protocol', column:'ownerusergridid', value:GRID_ID],
     [table:'resource', column:'gridid', value:GRID_ID],
     [table:'service', column:'gridid', value:GRID_ID],
