@@ -17,6 +17,8 @@ sqlStoredproc='create_storedproc.sql'
 
 import static groovy.io.FileType.FILES
 
+println new File('.').getAbsolutePath()
+
 new File('.').eachFileRecurse(FILES) {
     if(it.name.endsWith(sqlIndices)) {
         sqlIndices = it.name
