@@ -19,10 +19,10 @@ import static groovy.io.FileType.FILES
 
 new File('.').eachFileRecurse(FILES) {
     if(it.name.endsWith(sqlIndices)) {
-        sqlIndices = it
+        sqlIndices = it.name
     }
     if(it.name.endsWith(sqlStoredproc)) {
-            sqlStoredproc = it
+            sqlStoredproc = it.name
     }
 }
 
