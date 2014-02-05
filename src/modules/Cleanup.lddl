@@ -26,6 +26,8 @@ data = [
     [table:'resourcetype', column:'domainid', value:DOMAIN],
     [table:'resourcetype', column:'domainid', value:'nict.nlp'],
     [table:'resourcetype', column:'domainid', value:'anc.nict.nlp'],
+    [table:'resourceattribute', column:'gridid', value:GRID_ID],
+    [table:'serviceattribute', column:'gridid', value:GRID_ID],
     [table:'protocol', column:'ownerusergridid', value:GRID_ID],
     [table:'resource', column:'gridid', value:GRID_ID],
     [table:'service', column:'gridid', value:GRID_ID],
