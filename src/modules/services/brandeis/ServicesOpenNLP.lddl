@@ -2,7 +2,7 @@ include 'Database'
 include 'Config'
 include 'Functions'
 
-ROOT = "http://eldrad.cs-i.brandeis.edu:8080/stanfordnlp-web-service/services"
+ROOT = "http://eldrad.cs-i.brandeis.edu:8080/opennlp-web-service/services"
 
 License = 'GNU General Public License (v2 or later)'
 
