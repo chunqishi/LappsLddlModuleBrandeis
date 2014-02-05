@@ -4,52 +4,47 @@ include 'Functions'
 
 ROOT = "http://eldrad.cs-i.brandeis.edu:8080/opennlp-web-service/services"
 
-License = 'GNU General Public License (v2 or later)'
+License = 'Apache License, Version 2.0'
 
 
 services = [
     [
-      id:'stanfordnlp.postagger',
-      name:'Stanford NLP POSTagger',
+      id:'opennlp.postagger',
+      name:'OpenNLP POSTagger',
       url:"${ROOT}/POSTagger",
-      desc:'Stanford NLP POSTagger',
-      lang:'en-US',
+      desc:'OpenNLP POSTagger',
       license:License
     ],
 
     [
-      id:'stanfordnlp.tokenizer',
-      name:'Stanford NLP Tokenizer',
+      id:'opennlp.tokenizer',
+      name:'OpenNLP Tokenizer',
       url:"${ROOT}/Tokenizer",
-      desc:'Stanford NLP Tokenizer',
-      lang:'en-US',
+      desc:'OpenNLP Tokenizer',
       license:License
     ],
 
     [
-      id:'stanfordnlp.namedentityrecognizer',
-      name:'Stanford NLP NamedEntityRecognizer',
+      id:'opennlp.namedentityrecognizer',
+      name:'OpenNLP NamedEntityRecognizer',
       url:"${ROOT}/NamedEntityRecognizer",
-      desc:'Stanford NLP NamedEntityRecognizer',
-      lang:'en-US',
+      desc:'OpenNLP NamedEntityRecognizer',
       license:License
     ],
 
     [
-      id:'stanfordnlp.splitter',
-      name:'Stanford NLP Splitter',
+      id:'opennlp.splitter',
+      name:'OpenNLP Splitter',
       url:"${ROOT}/Splitter",
-      desc:'Stanford NLP Splitter',
-      lang:'en-US',
+      desc:'OpenNLP Splitter',
       license:License
     ],
 
     [
-      id:'stanfordnlp.parser',
-      name:'Stanford NLP Parser',
+      id:'opennlp.parser',
+      name:'OpenNLP Parser',
       url:"${ROOT}/Parser",
-      desc:'Stanford NLP Parser',
-      lang:'en-US',
+      desc:'OpenNLP Parser',
       license:License
     ],
 ]
