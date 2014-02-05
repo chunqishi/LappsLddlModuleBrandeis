@@ -9,6 +9,6 @@ include 'Protocols'
 include 'Resource'
 include 'Service'
 include 'Interfaces'
-include 'Users'
+//include 'Users'
 
 news 'The LAPPS base types have been configured via LDDL'
