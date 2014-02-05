@@ -17,15 +17,15 @@ sqlStoredproc='create_storedproc.sql'
 
 import static groovy.io.FileType.FILES
 
-println new File('.').getAbsolutePath()
+// println new File('.').getAbsolutePath()
 
 new File('.').eachFileRecurse(FILES) {
-    println it.name
+    // println it.name
     if(it.name.endsWith(sqlIndices)) {
-        sqlIndices = it.name
+        sqlIndices = it.getAbsolutePath()
     }
     if(it.name.endsWith(sqlStoredproc)) {
-            sqlStoredproc = it.name
+            sqlStoredproc = it.getAbsolutePath()
     }
 }
 
