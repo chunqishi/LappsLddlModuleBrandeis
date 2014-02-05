@@ -20,7 +20,7 @@ data = [
     [table:'resourcetype_resourcemetaattribute', column:'resourcetype_domainid', value:DOMAIN],
     [table:'resourcetype_resourcemetaattribute', column:'resourcetype_domainid', value:'nict.nlp'],
     [table:'resourcetype_resourcemetaattribute', column:'resourcetype_domainid', value:'anc.nict.nlp'],
-    [table:'resourcemetaattribute', column:'gridid', value:GRID_ID],
+    [table:'resourcemetaattribute', column:'domainid', value:DOMAIN],
     [table:'resourcemetaattribute', column:'domainid', value:'nict.nlp'],
     [table:'resourcemetaattribute', column:'domainid', value:'anc.nict.nlp'],
     [table:'resourcetype', column:'domainid', value:DOMAIN],
