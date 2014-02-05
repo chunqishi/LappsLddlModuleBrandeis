@@ -20,6 +20,7 @@ import static groovy.io.FileType.FILES
 println new File('.').getAbsolutePath()
 
 new File('.').eachFileRecurse(FILES) {
+    println it.name
     if(it.name.endsWith(sqlIndices)) {
         sqlIndices = it.name
     }
