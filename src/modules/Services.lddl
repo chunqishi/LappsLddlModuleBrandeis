@@ -17,7 +17,8 @@ include 'Users'
 **/
 
 
-
+include 'services/brandeis/ServicesOpenNLP'
+include 'services/brandeis/ServicesStanford'
 
 
 

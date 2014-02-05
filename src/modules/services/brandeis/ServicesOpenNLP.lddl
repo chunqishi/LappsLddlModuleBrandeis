@@ -1,0 +1,57 @@
+include 'Database'
+include 'Config'
+include 'Functions'
+
+ROOT = "http://eldrad.cs-i.brandeis.edu:8080/stanfordnlp-web-service/services"
+
+License = 'GNU General Public License (v2 or later)'
+
+
+services = [
+    [
+      id:'stanfordnlp.postagger',
+      name:'Stanford NLP POSTagger',
+      url:"${ROOT}/POSTagger",
+      desc:'Stanford NLP POSTagger',
+      license:License
+    ],
+
+    [
+      id:'stanfordnlp.tokenizer',
+      name:'Stanford NLP Tokenizer',
+      url:"${ROOT}/Tokenizer",
+      desc:'Stanford NLP Tokenizer',
+      license:License
+    ],
+
+    [
+      id:'stanfordnlp.namedentityrecognizer',
+      name:'Stanford NLP NamedEntityRecognizer',
+      url:"${ROOT}/NamedEntityRecognizer",
+      desc:'Stanford NLP NamedEntityRecognizer',
+      license:License
+    ],
+
+    [
+      id:'stanfordnlp.splitter',
+      name:'Stanford NLP Splitter',
+      url:"${ROOT}/Splitter",
+      desc:'Stanford NLP Splitter',
+      license:License
+    ],
+
+    [
+      id:'stanfordnlp.parser',
+      name:'Stanford NLP Parser',
+      url:"${ROOT}/Parser",
+      desc:'Stanford NLP Parser',
+      license:License
+    ],
+]
+
+
+
+
+services.each {
+    register_service(it)
+}
