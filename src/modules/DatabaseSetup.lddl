@@ -11,7 +11,22 @@
 include 'Config'
 include 'Database'
 
-sql new File('create_indices.sql').text
-sql new File('create_storedproc.sql').text
+
+sqlIndices='create_indices.sql'
+sqlStoredproc='create_storedproc.sql'
+
+import static groovy.io.FileType.FILES
+
+new File('.').eachFileRecurse(FILES) {
+    if(it.name.endsWith(sqlIndices)) {
+        sqlIndices = it
+    }
+    if(it.name.endsWith(sqlStoredproc)) {
+            sqlStoredproc = it
+    }
+}
+
+sql new File(sqlIndices).text
+sql new File(sqlStoredproc).text
 
 comment "Index and stored procedure have been created."
