@@ -7,21 +7,31 @@
 include 'Config'
 include 'Database'
 
+wsdlWebService='WebService.wsdl'
+wsdlDataSource='Datasource.wsdl'
+
+new File('.').eachFileRecurse(FILES) {
+    if(it.name.endsWith(wsdlWebService))
+        wsdlWebService = it.getAbsolutePath()
+
+    if(it.name.endsWith(wsdlDataSource))
+        wsdlDataSource = it.getAbsolutePath()
+}
+
 serviceInterfaceDefinition {
     name 'LAPPS DataSource'
 	domain DOMAIN
-	type DATASOURCE
+	type 'service.type.datasource'
 	protocol 'SOAP_RPC_ENCODED'
-	url 'file:Datasource.wsdl'
+	url "file:${wsdlDataSource}"
 }
 
 serviceInterfaceDefinition {
     name 'LAPPS Web Service'
 	domain DOMAIN
-	type SERVICE
+	type 'service.type.processor'
 	protocol 'SOAP_RPC_ENCODED'
-	//url "${Servers.GRID}/service_manager/wsdl/anc:STANFORD_SPLITTER"
-	url 'file:WebService.wsdl'
+	url "file:${wsdlWebService}"
 }
 
 news 'Added interface definitions for LAPPS web services and data sources.'
