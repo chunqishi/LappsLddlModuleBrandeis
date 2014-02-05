@@ -13,6 +13,7 @@ services = [
       name:'Stanford NLP POSTagger',
       url:"${ROOT}/POSTagger",
       desc:'Stanford NLP POSTagger',
+      lang:'en-US',
       license:License
     ],
 
@@ -21,6 +22,7 @@ services = [
       name:'Stanford NLP Tokenizer',
       url:"${ROOT}/Tokenizer",
       desc:'Stanford NLP Tokenizer',
+      lang:'en-US',
       license:License
     ],
 
@@ -29,6 +31,7 @@ services = [
       name:'Stanford NLP NamedEntityRecognizer',
       url:"${ROOT}/NamedEntityRecognizer",
       desc:'Stanford NLP NamedEntityRecognizer',
+      lang:'en-US',
       license:License
     ],
 
@@ -37,6 +40,7 @@ services = [
       name:'Stanford NLP Splitter',
       url:"${ROOT}/Splitter",
       desc:'Stanford NLP Splitter',
+      lang:'en-US',
       license:License
     ],
 
@@ -45,6 +49,7 @@ services = [
       name:'Stanford NLP Parser',
       url:"${ROOT}/Parser",
       desc:'Stanford NLP Parser',
+      lang:'en-US',
       license:License
     ],
 ]
