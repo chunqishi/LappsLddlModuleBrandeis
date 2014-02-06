@@ -58,6 +58,6 @@ services = [
 
 
 services.each {
-    println it.name
+    comment it.name
     register_service(it)
 }
