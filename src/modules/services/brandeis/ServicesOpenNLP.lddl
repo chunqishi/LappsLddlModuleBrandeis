@@ -58,5 +58,6 @@ services = [
 
 
 services.each {
+    println it.name
     register_service(it)
 }
