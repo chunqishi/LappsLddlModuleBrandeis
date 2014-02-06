@@ -48,6 +48,7 @@ register_service = { svc ->
         allow 'commercial', 'nonprofit', 'research'
         control 'client', 'server'
         federate true
+        lang svc.lang
     }
     news "Configured ${svc.name}"
 }
@@ -67,6 +68,7 @@ register_converter = { converter ->
         allow 'commercial', 'nonprofit', 'research'
         control 'client', 'server'
         federate true
+        lang converter.lang
     }
     news "Registered ${converter.name}"
 }
