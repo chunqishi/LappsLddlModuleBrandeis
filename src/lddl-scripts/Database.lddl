@@ -2,13 +2,8 @@
  * Database connection info.
  */
 
-def database='langrid'
-def rolename='langrid'
-def password='langrid'
-
-
 database {
-    url 'jdbc:postgresql://localhost/${database}'
-    username ${rolename}
-    password ${password}
+    url 'jdbc:postgresql://localhost/langrid'
+    username langrid
+    password langrid
 }
