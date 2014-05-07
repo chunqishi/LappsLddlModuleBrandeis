@@ -16,7 +16,7 @@ License = 'GNU General Public License (v2 or later)'
 services = [
     [
       id:'stanfordnlp.postagger',
-      name:'Stanford (v${VERSION}) NLP POSTagger',
+      name:"Stanford (v${VERSION}) NLP POSTagger",
       url:"${ROOT}/POSTagger",
       desc:'Stanford NLP POSTagger',
       lang:'(English)',
@@ -25,7 +25,7 @@ services = [
 
     [
       id:'stanfordnlp.tokenizer',
-      name:'Stanford (v${VERSION}) NLP Tokenizer',
+      name:"Stanford (v${VERSION}) NLP Tokenizer",
       url:"${ROOT}/Tokenizer",
       desc:'Stanford NLP Tokenizer',
       lang:'(English)',
@@ -34,7 +34,7 @@ services = [
 
     [
       id:'stanfordnlp.namedentityrecognizer',
-      name:'Stanford (v${VERSION}) NLP NamedEntityRecognizer',
+      name:"Stanford (v${VERSION}) NLP NamedEntityRecognizer",
       url:"${ROOT}/NamedEntityRecognizer",
       desc:'Stanford NLP NamedEntityRecognizer',
       lang:'(English)',
@@ -43,7 +43,7 @@ services = [
 
     [
       id:'stanfordnlp.splitter',
-      name:'Stanford (v${VERSION}) NLP Splitter',
+      name:"Stanford (v${VERSION}) NLP Splitter",
       url:"${ROOT}/Splitter",
       desc:'Stanford NLP Splitter',
       lang:'(English)',
@@ -52,7 +52,7 @@ services = [
 
     [
       id:'stanfordnlp.parser',
-      name:'Stanford (v${VERSION}) NLP Parser',
+      name:"Stanford (v${VERSION}) NLP Parser",
       url:"${ROOT}/Parser",
       desc:'Stanford NLP Parser',
       lang:'(English)',

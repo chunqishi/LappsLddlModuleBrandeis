@@ -2,8 +2,12 @@
  * Database connection info.
  */
 
+database='langrid'
+rolename='langrid'
+password='langrid'
+
 database {
-    url 'jdbc:postgresql://localhost/langrid'
-    username 'langrid'
-    password 'langrid'
+    url "jdbc:postgresql://localhost/${database}"
+    username "${rolename}"
+    password "${password}"
 }
