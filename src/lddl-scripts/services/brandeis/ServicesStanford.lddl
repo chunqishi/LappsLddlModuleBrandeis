@@ -1,8 +1,14 @@
+include 'Servers'
 include 'Database'
-include 'Config'
+include 'Common'
 include 'Functions'
 
-ROOT = "http://eldrad.cs-i.brandeis.edu:8080/stanfordnlp-web-service/services"
+
+
+def VERSION="0.0.2"
+def ROOT = "http://eldrad.cs-i.brandeis.edu:8282/stanfordnlp-web-service/services"
+
+//def ROOT="${servers.DEFAULT}/StanfordServices/${VERSION}/services"
 
 License = 'GNU General Public License (v2 or later)'
 
@@ -10,7 +16,7 @@ License = 'GNU General Public License (v2 or later)'
 services = [
     [
       id:'stanfordnlp.postagger',
-      name:'Stanford NLP POSTagger',
+      name:'Stanford (v${VERSION}) NLP POSTagger',
       url:"${ROOT}/POSTagger",
       desc:'Stanford NLP POSTagger',
       lang:'(English)',
@@ -19,7 +25,7 @@ services = [
 
     [
       id:'stanfordnlp.tokenizer',
-      name:'Stanford NLP Tokenizer',
+      name:'Stanford (v${VERSION}) NLP Tokenizer',
       url:"${ROOT}/Tokenizer",
       desc:'Stanford NLP Tokenizer',
       lang:'(English)',
@@ -28,7 +34,7 @@ services = [
 
     [
       id:'stanfordnlp.namedentityrecognizer',
-      name:'Stanford NLP NamedEntityRecognizer',
+      name:'Stanford (v${VERSION}) NLP NamedEntityRecognizer',
       url:"${ROOT}/NamedEntityRecognizer",
       desc:'Stanford NLP NamedEntityRecognizer',
       lang:'(English)',
@@ -37,7 +43,7 @@ services = [
 
     [
       id:'stanfordnlp.splitter',
-      name:'Stanford NLP Splitter',
+      name:'Stanford (v${VERSION}) NLP Splitter',
       url:"${ROOT}/Splitter",
       desc:'Stanford NLP Splitter',
       lang:'(English)',
@@ -46,7 +52,7 @@ services = [
 
     [
       id:'stanfordnlp.parser',
-      name:'Stanford NLP Parser',
+      name:'Stanford (v${VERSION}) NLP Parser',
       url:"${ROOT}/Parser",
       desc:'Stanford NLP Parser',
       lang:'(English)',

@@ -1,8 +1,11 @@
+include 'Servers'
 include 'Database'
-include 'Config'
+include 'Common'
 include 'Functions'
 
-ROOT = "http://eldrad.cs-i.brandeis.edu:8080/opennlp-web-service/services"
+
+def VERSION = "0.0.2"
+def ROOT = "http://eldrad.cs-i.brandeis.edu:8282/opennlp-web-service/services"
 
 License = 'Apache License, Version 2.0'
 
@@ -10,7 +13,7 @@ License = 'Apache License, Version 2.0'
 services = [
     [
       id:'opennlp.postagger',
-      name:'OpenNLP POSTagger',
+      name:'OpenNLP (v${VERSION}) POSTagger',
       url:"${ROOT}/POSTagger",
       desc:'OpenNLP POSTagger',
       lang:'(English)',
@@ -19,7 +22,7 @@ services = [
 
     [
       id:'opennlp.tokenizer',
-      name:'OpenNLP Tokenizer',
+      name:'OpenNLP (v${VERSION}) Tokenizer',
       url:"${ROOT}/Tokenizer",
       desc:'OpenNLP Tokenizer',
       lang:'(English)',
@@ -28,7 +31,7 @@ services = [
 
     [
       id:'opennlp.namedentityrecognizer',
-      name:'OpenNLP NamedEntityRecognizer',
+      name:'OpenNLP (v${VERSION}) NamedEntityRecognizer',
       url:"${ROOT}/NamedEntityRecognizer",
       desc:'OpenNLP NamedEntityRecognizer',
       lang:'(English)',
@@ -37,7 +40,7 @@ services = [
 
     [
       id:'opennlp.splitter',
-      name:'OpenNLP Splitter',
+      name:'OpenNLP (v${VERSION}) Splitter',
       url:"${ROOT}/Splitter",
       desc:'OpenNLP Splitter',
       lang:'(English)',
@@ -46,7 +49,7 @@ services = [
 
     [
       id:'opennlp.parser',
-      name:'OpenNLP Parser',
+      name:'OpenNLP (v${VERSION}) Parser',
       url:"${ROOT}/Parser",
       desc:'OpenNLP Parser',
       lang:'(English)',
