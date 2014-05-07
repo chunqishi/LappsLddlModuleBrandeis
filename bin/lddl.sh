@@ -25,7 +25,7 @@ if [[ -f $Lddl ]]; then
 echo
 echo "Running $Version ..."
 echo "<------------ $Lddl ------------------"
-java -jar $Jar $Lddl
+java -jar $Jar $Lddl $2 $3 $4
 errno=$?
 echo "--------------------------------------->"
 
