@@ -1,0 +1,32 @@
+/*
+ * The LDDL script for configuring the ANC/Vassar LAPPS service node.  This
+ * script configures the types, interfaces and services available.
+ */
+include 'Servers'
+
+if (args.clean) {
+	println "Cleaning the database"
+	include 'Cleanup'
+}
+else {
+	println "Assuming a fresh database install."
+	include 'DatabaseSetup'
+}
+
+COPYRIGHT = 'Copyright 2014 Brandeis University'
+
+// The Setup script includes the common LAPPS definitions for resource and 
+// service types, and meta-attribues.
+include 'Setup'
+
+// Definitions of the MASC DataSource services
+// include 'vassar/MASC'
+
+// Definitions of the processing services available at Brandeis University.
+include 'services/brandeis/ServicesOpenNLP'
+include 'services/brandeis/ServicesStanford'
+
+
+include 'Users'
+
+news 'The LAPPS node has been configured via LDDL'

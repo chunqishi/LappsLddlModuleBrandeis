@@ -4,11 +4,11 @@
  * as this script.
  */
 
-include 'Config'
+include 'Common'
 include 'Database'
 
-wsdlWebService='WebService.wsdl'
-wsdlDataSource='Datasource.wsdl'
+def wsdlWebService='WebService.wsdl'
+def wsdlDataSource='Datasource.wsdl'
 
 import static groovy.io.FileType.FILES
 new File('.').eachFileRecurse(FILES) {
@@ -20,8 +20,8 @@ new File('.').eachFileRecurse(FILES) {
 }
 
 serviceInterfaceDefinition {
-    name 'LAPPS DataSource'
-	domain 'lapps.nlp'
+	domain DOMAIN
+	type DATASOURCE
 	type 'service.type.datasource'
 	protocol 'SOAP_RPC_ENCODED'
 	url "file:${wsdlDataSource}"
@@ -29,8 +29,8 @@ serviceInterfaceDefinition {
 
 serviceInterfaceDefinition {
     name 'LAPPS Web Service'
-	domain 'lapps.nlp'
-	type 'service.type.processor'
+	domain DOMAIN
+	type SERVICE
 	protocol 'SOAP_RPC_ENCODED'
 	url "file:${wsdlWebService}"
 }

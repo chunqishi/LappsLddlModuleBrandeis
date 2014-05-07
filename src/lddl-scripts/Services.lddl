@@ -16,10 +16,11 @@ include 'Users'
 
 **/
 
+include 'Servers'
 
 include 'services/brandeis/ServicesOpenNLP'
 include 'services/brandeis/ServicesStanford'
 
+include 'Users'
 
-
-// news 'Services have been configured via LDDL'
+news 'Services have been configured via LDDL'

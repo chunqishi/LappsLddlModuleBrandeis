@@ -2,10 +2,8 @@
  * The domain for LAPPS NLP applications.
  */
 
-include 'Config'
+include 'Common'
 include 'Database'
-
-DOMAIN = 'lapps.nlp'
 
 domain {
 	id DOMAIN
