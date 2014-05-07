@@ -13,9 +13,9 @@ CD=$(pwd)
 #cd $CurDir
 HomeDir=$(dirname $CurDir)
 LibDir=$HomeDir/lib
-echo $LibDir
-Jar=$(find $LibDir -type f -name 'LDDL*.jar')
-echo $Jar
+#echo $LibDir
+Jar=$(find $LibDir -type f -name '*.jar')
+#echo $Jar
 Version=${Jar%.*}
 Version=${Version##*/}
 
@@ -40,8 +40,16 @@ else
 fi
 
 else
-  echo "LDDL $Lddl not exist. "
+  echo ""
+  echo "@usage:"
+  echo "bin/lddl.sh Setup.lddl"
+  echo ""
+  echo "@refer:"
+  echo "You can use one of the *.lddl:"
+  echo "<------------ all lddls ------------------"
   find $HomeDir -name "*.lddl"
+  echo "----------------------------------------->"
+  echo ""
 fi
 
 #cd $CD
