@@ -23,6 +23,7 @@ include 'Setup'
 // include 'vassar/MASC'
 
 // Definitions of the processing services available at Brandeis University.
+include 'services/brandeis/Resource'
 include 'services/brandeis/ServicesOpenNLP'
 include 'services/brandeis/ServicesStanford'
 
