@@ -1,7 +1,7 @@
 include 'Common'
 include 'Database'
 
-/*
+/**
 user {
     id 'eldrad'
     password 'eldrad'
@@ -13,7 +13,7 @@ user {
 }
 
 news 'Registered default administration user.'
-*/
+**/
 
 user {
     id 'tester'

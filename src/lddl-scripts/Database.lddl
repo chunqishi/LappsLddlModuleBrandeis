@@ -4,6 +4,6 @@
 
 database {
     url 'jdbc:postgresql://localhost/langrid'
-    username langrid
-    password langrid
+    username 'langrid'
+    password 'langrid'
 }
