@@ -20,9 +20,9 @@ new File('.').eachFileRecurse(FILES) {
 }
 
 serviceInterfaceDefinition {
+    name 'LAPPS DataSource'
 	domain DOMAIN
 	type DATASOURCE
-	type 'service.type.datasource'
 	protocol 'SOAP_RPC_ENCODED'
 	url "file:${wsdlDataSource}"
 }
