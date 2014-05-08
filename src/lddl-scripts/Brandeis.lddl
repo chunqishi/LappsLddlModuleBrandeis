@@ -24,8 +24,8 @@ include 'Setup'
 
 // Definitions of the processing services available at Brandeis University.
 include 'services/brandeis/Resource'
-include 'services/brandeis/ServicesOpenNLP'
-include 'services/brandeis/ServicesStanford'
+include 'services/brandeis/ServicesOpenNLP#0.0.4-SNAPSHOT'
+include 'services/brandeis/ServicesStanford#0.0.4-SNAPSHOT'
 
 
 include 'Users'
