@@ -1,0 +1,35 @@
+/*
+ * The LDDL script for configuring the ANC/Vassar LAPPS service node.  This
+ * script configures the types, interfaces and services available.
+ */
+include 'Servers'
+include 'Setup'
+// The Setup script includes the common LAPPS definitions for resource and
+// service types, and meta-attribues.
+
+
+if (args.clean) {
+	println "Cleaning the database"
+	include 'Cleanup'
+}
+else {
+	println "Assuming a fresh database install."
+	include 'DatabaseSetup'
+}
+
+COPYRIGHT = 'Copyright 2014 lapps.anc.org'
+
+
+def directory='lrec'
+
+
+// Definitions of the processing services available at Brandeis University.
+
+include "services/${directory}/Resource"
+include "services/${directory}/ServicesNLTKTagger"
+include "services/${directory}/ServicesOpenNLPTagger"
+
+
+include 'Users'
+
+news 'The LAPPS node has been configured via LDDL'
