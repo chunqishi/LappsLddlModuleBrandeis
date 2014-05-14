@@ -1,9 +1,9 @@
 
 ///////////////////////<CUSTOMIZE>/////////////////////////////////
 def HOST = "127.0.0.1:8080"
-def SERVICE_WAR = "helloworld-0.0.1-SNAPSHOT.war"
+def SERVICE_WAR = "stanford_tagger-0.0.1-SNAPSHOT.war"
 def VERSION="0.0.1"
-def SERVICE_CLASS = "HelloWorld"
+def SERVICE_CLASS = "StanfordTagger"
 
 def SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
 def ROOT = "http://${HOST}/${SERVICE_PATH}/services"
@@ -427,7 +427,7 @@ services = [
 
 services.each {
     comment it.name
-    register_other(it)
+    register_service(it)
 }
 
 news 'The LAPPS node has been configured via LDDL'

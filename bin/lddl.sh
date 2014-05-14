@@ -35,7 +35,7 @@ if [ $errno -eq 0 ]; then
 else
     echo "Edit ( Press [Enter] to continue ) ..."
     read keypress
-    vim $Lddl
+    vi $Lddl
 
 fi
 
