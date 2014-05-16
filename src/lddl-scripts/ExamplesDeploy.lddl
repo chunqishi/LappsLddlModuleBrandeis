@@ -1,13 +1,13 @@
 
 ///////////////////////<CUSTOMIZE>/////////////////////////////////
 def HOST = "127.0.0.1:8080"
+
 def SERVICE_WAR = "helloworld-0.0.1-SNAPSHOT.war"
 def VERSION="0.0.1"
 def SERVICE_CLASS = "HelloWorld"
 
 def SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
-def ROOT = "http://${HOST}/${SERVICE_PATH}/services"
-def SERVICE_URL = "${ROOT}/${SERVICE_CLASS}"
+def SERVICE_URL = "http://${HOST}/${SERVICE_PATH}/services/${SERVICE_CLASS}"
 def SERVICE_WSDL = "${SERVICE_URL}?wsdl"
 
 def DATABASE='langrid'
@@ -412,13 +412,19 @@ resource {
 } //IS_DUPLICATE
 
 
+SERVICE_WAR = "helloworld-0.0.1-SNAPSHOT.war"
+VERSION="0.0.1"
+SERVICE_CLASS = "HelloWorld"
 
+SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
+SERVICE_URL = "http://${HOST}/${SERVICE_PATH}/services/${SERVICE_CLASS}"
+SERVICE_WSDL = "${SERVICE_URL}?wsdl"
 
 services = [
     [
       id:"${SERVICE_CLASS}.v${VERSION}",
       name:"${SERVICE_CLASS} (v${VERSION})",
-      url:"${ROOT}/${SERVICE_CLASS}",
+      url:"${SERVICE_URL}",
       desc:"LappsGrid ${SERVICE_CLASS}",
       lang:'(English)',
       license:License
@@ -430,5 +436,52 @@ services.each {
     register_other(it)
 }
 
+SERVICE_WAR = "stanford_tagger-0.0.1-SNAPSHOT.war"
+VERSION="0.0.1"
+SERVICE_CLASS = "StanfordTagger"
+
+SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
+SERVICE_URL = "http://${HOST}/${SERVICE_PATH}/services/${SERVICE_CLASS}"
+SERVICE_WSDL = "${SERVICE_URL}?wsdl"
+
+services = [
+    [
+      id:"${SERVICE_CLASS}.v${VERSION}",
+      name:"${SERVICE_CLASS} (v${VERSION})",
+      url:"${SERVICE_URL}",
+      desc:"LappsGrid ${SERVICE_CLASS}",
+      lang:'(English)',
+      license:License
+    ],
+]
+
+services.each {
+    comment it.name
+    register_services(it)
+}
+
+SERVICE_WAR = "nltk_tagger-0.0.1-SNAPSHOT.war"
+VERSION="0.0.1"
+SERVICE_CLASS = "NLTKTagger"
+
+SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
+SERVICE_URL = "http://${HOST}/${SERVICE_PATH}/services/${SERVICE_CLASS}"
+SERVICE_WSDL = "${SERVICE_URL}?wsdl"
+
+services = [
+    [
+      id:"${SERVICE_CLASS}.v${VERSION}",
+      name:"${SERVICE_CLASS} (v${VERSION})",
+      url:"${SERVICE_URL}",
+      desc:"LappsGrid ${SERVICE_CLASS}",
+      lang:'(English)',
+      license:License
+    ],
+]
+
+services.each {
+    comment it.name
+    register_services(it)
+}
 news 'The LAPPS node has been configured via LDDL'
 ///////////////////////</SERVICES>/////////////////////////////////
