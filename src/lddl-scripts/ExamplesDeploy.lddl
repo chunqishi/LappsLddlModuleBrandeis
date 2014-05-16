@@ -23,7 +23,7 @@ def PASSWORD='langrid'
 
 def IS_DUPLICATE = true
 ///////////////////////</CUSTOMIZE>/////////////////////////////////
-waitForReturn('CUSTOMIZE')
+
 
 ///////////////////////<COMMON>/////////////////////////////////
 def DOMAIN = 'lapps.nlp'
@@ -44,7 +44,7 @@ def License = 'Apache License, Version 2.0'
 def urlWebService='https://raw.githubusercontent.com/chunqishi/lapps_lddl_brandeis/master/src/lddl-scripts/WebService.wsdl'
 def urlDataSource='https://raw.githubusercontent.com/chunqishi/lapps_lddl_brandeis/master/src/lddl-scripts/Datasource.wsdl'
 ///////////////////////</COMMON>/////////////////////////////////
-waitForReturn('COMMON')
+
 
 ///////////////////////<DOMAIN>/////////////////////////////////
 if ( ! IS_DUPLICATE ) {
@@ -58,7 +58,7 @@ news "Domain added: ${DOMAIN}"
 
 }
 ///////////////////////</DOMAIN>/////////////////////////////////
-waitForReturn('DOMAIN')
+
 
 ///////////////////////<PROTOCOL>/////////////////////////////////
 if ( ! IS_DUPLICATE ) {
@@ -77,7 +77,7 @@ protocol {
 
 } //IS_DUPLICATE
 ///////////////////////</PROTOCOL>/////////////////////////////////
-waitForReturn('PROTOCOL')
+
 
 
 ///////////////////////<RESOURCE>/////////////////////////////////
@@ -150,7 +150,7 @@ news 'LAPPS resources have been registered.'
 } //IS_DUPLICATE
 
 ///////////////////////</RESOURCE>/////////////////////////////////
-waitForReturn('RESOURCE')
+
 
 
 ///////////////////////<SERVICE>/////////////////////////////////
@@ -205,7 +205,7 @@ news 'LAPPS service types and attributes have been registered.'
 } //IS_DUPLICATE
 
 ///////////////////////</SERVICE>/////////////////////////////////
-waitForReturn('SERVICE')
+
 
 
 ///////////////////////<INTERFACE>/////////////////////////////////
@@ -262,7 +262,7 @@ if(new File(wsdlOtherService).exists())
 
 news 'Added interface definitions for LAPPS web services and data sources.'
 ///////////////////////<INTERFACE>/////////////////////////////////
-waitForReturn('INTERFACE')
+
 
 
 
@@ -374,7 +374,7 @@ register_converter = { converter ->
 }
 
 /////////////////////</FUNCTIONS>//////////////////////////////////
-waitForReturn('FUNCTIONS')
+
 
 
 
@@ -386,7 +386,7 @@ database {
     password "${PASSWORD}"
 }
 ///////////////////////</DATABASE>/////////////////////////////////
-waitForReturn('DATABASE')
+
 
 
 
@@ -408,10 +408,9 @@ news 'Registered test user.'
 } //IS_DUPLICATE
 
 ///////////////////////</USER>/////////////////////////////////
-waitForReturn('USER')
 
 
-
+waitForReturn('SERVICES')
 ///////////////////////<SERVICES>/////////////////////////////////
 if ( ! IS_DUPLICATE ) {
 
@@ -430,6 +429,7 @@ resource {
 
 } //IS_DUPLICATE
 
+waitForReturn('resource')
 
 SERVICE_WAR = "helloworld-0.0.1-SNAPSHOT.war"
 VERSION="0.0.1"
@@ -439,6 +439,8 @@ SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
 SERVICE_URL = "http://${HOST}/${SERVICE_PATH}/services/${SERVICE_CLASS}"
 SERVICE_WSDL = "${SERVICE_URL}?wsdl"
 
+waitForReturn('helloworld-0.0.1-SNAPSHOT.war')
+
 services = [
     [
       id:"${SERVICE_CLASS}.v${VERSION}",
@@ -450,10 +452,14 @@ services = [
     ],
 ]
 
+
 services.each {
     comment it.name
     register_other(it)
 }
+
+
+waitForReturn('register_other')
 
 SERVICE_WAR = "stanford_tagger-0.0.1-SNAPSHOT.war"
 VERSION="0.0.1"
@@ -463,6 +469,9 @@ SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
 SERVICE_URL = "http://${HOST}/${SERVICE_PATH}/services/${SERVICE_CLASS}"
 SERVICE_WSDL = "${SERVICE_URL}?wsdl"
 
+
+waitForReturn('stanford_tagger-0.0.1-SNAPSHOT.war')
+
 services = [
     [
       id:"${SERVICE_CLASS}.v${VERSION}",
@@ -478,6 +487,9 @@ services.each {
     comment it.name
     register_services(it)
 }
+
+
+waitForReturn('register_services')
 
 SERVICE_WAR = "nltk_tagger-0.0.1-SNAPSHOT.war"
 VERSION="0.0.1"
@@ -487,6 +499,9 @@ SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
 SERVICE_URL = "http://${HOST}/${SERVICE_PATH}/services/${SERVICE_CLASS}"
 SERVICE_WSDL = "${SERVICE_URL}?wsdl"
 
+
+waitForReturn('nltk_tagger-0.0.1-SNAPSHOT.war')
+
 services = [
     [
       id:"${SERVICE_CLASS}.v${VERSION}",
@@ -502,6 +517,9 @@ services.each {
     comment it.name
     register_services(it)
 }
+
+waitForReturn('register_services')
+
 news 'The LAPPS node has been configured via LDDL'
 ///////////////////////</SERVICES>/////////////////////////////////
 waitForReturn('SERVICES')
