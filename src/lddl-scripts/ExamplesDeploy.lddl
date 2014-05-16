@@ -483,6 +483,7 @@ services = [
     ],
 ]
 
+println services
 
 services.each {
     comment it.name
