@@ -282,7 +282,7 @@ register_datasource = { source ->
         domain DOMAIN
         type DATASOURCE
         copyright COPYRIGHT
-        resource MASC_ID
+        resource NONE_ID
         license APACHE
         description source.desc
         allow 'commercial', 'nonprofit', 'research'
@@ -482,6 +482,7 @@ services = [
       license:License
     ],
 ]
+
 
 services.each {
     comment it.name
