@@ -14,7 +14,7 @@ def DATABASE='langrid'
 def ROLENAME='langrid'
 def PASSWORD='langrid'
 
-def IS_DUPLICATE = false
+def IS_DUPLICATE = true
 ///////////////////////</CUSTOMIZE>/////////////////////////////////
 
 
