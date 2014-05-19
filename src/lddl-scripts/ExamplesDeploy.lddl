@@ -410,7 +410,6 @@ news 'Registered test user.'
 ///////////////////////</USER>/////////////////////////////////
 
 
-waitForReturn('SERVICES')
 ///////////////////////<SERVICES>/////////////////////////////////
 if ( ! IS_DUPLICATE ) {
 
@@ -429,7 +428,6 @@ resource {
 
 } //IS_DUPLICATE
 
-waitForReturn('resource')
 
 SERVICE_WAR = "helloworld-0.0.1-SNAPSHOT.war"
 VERSION="0.0.1"
@@ -459,7 +457,6 @@ services.each {
 }
 
 
-waitForReturn('register_other')
 
 SERVICE_WAR = "stanford_tagger-0.0.1-SNAPSHOT.war"
 VERSION="0.0.1"
@@ -491,7 +488,6 @@ services.each {
 }
 
 
-waitForReturn('register_services')
 
 SERVICE_WAR = "nltk_tagger-0.0.1-SNAPSHOT.war"
 VERSION="0.0.1"
@@ -520,8 +516,5 @@ services.each {
     register_service(it)
 }
 
-waitForReturn('register_services')
-
 news 'The LAPPS node has been configured via LDDL'
 ///////////////////////</SERVICES>/////////////////////////////////
-waitForReturn('SERVICES')
