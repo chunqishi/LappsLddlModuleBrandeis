@@ -1,4 +1,4 @@
-
+include 'Cleanup'
 
 /////////////////////////////////
 def waitForReturn(tips) {
@@ -21,7 +21,7 @@ def DATABASE='langrid'
 def ROLENAME='langrid'
 def PASSWORD='langrid'
 
-def IS_DUPLICATE = true
+def IS_DUPLICATE = false
 ///////////////////////</CUSTOMIZE>/////////////////////////////////
 
 
