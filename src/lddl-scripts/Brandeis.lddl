@@ -28,13 +28,13 @@ include 'services/brandeis/ServicesOpenNLP#0.0.4-SNAPSHOT'
 include 'services/brandeis/ServicesStanford#0.0.4-SNAPSHOT'
 
 // Definitions of the MASC DataSource services
-include 'vassar/MASC'
+include 'services/vassar/MASC'
 
 // Definitions of the processing services available at Vassar.
-include 'vassar/Datasources1.4.2'
-include 'vassar/Converters0.4.0'
-include 'vassar/Gate1.3.5'
-include 'vassar/Stanford1.4.0'
+include 'services/vassar/Datasources1.4.2'
+include 'services/vassar/Converters0.4.0'
+include 'services/vassar/Gate1.3.5'
+include 'services/vassar/Stanford1.4.0'
 
 include 'Users'
 
