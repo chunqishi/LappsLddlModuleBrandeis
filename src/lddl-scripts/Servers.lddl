@@ -1,6 +1,6 @@
 /* Server on the LAPPS grid. */
 servers = [:]
-servers.localhost = 'http://localhost:8080'
+servers.localhost = 'http://eldrad.cs-i.brandeis.edu:8282'
 servers.vassar = 'http://grid.anc.org:8080'
 servers.brandeis = 'http://eldrad.cs-i.brandeis.edu:8080'
 

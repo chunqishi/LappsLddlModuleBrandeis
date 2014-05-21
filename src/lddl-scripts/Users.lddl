@@ -25,5 +25,9 @@ user {
     organization 'Computer Science Department, Brandeis University'
 }
 
+/**
+Username: guest
+Password: guest1
+**/
 
 news 'Registered test user.'
