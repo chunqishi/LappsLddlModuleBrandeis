@@ -17,7 +17,7 @@ resource {
     	unit 'words'
     }
 }
-
+/**
 resource {
     id NONE_ID
     copyright COPYRIGHT
@@ -30,3 +30,4 @@ resource {
     	lang 'none'
     }
 }
+**/
