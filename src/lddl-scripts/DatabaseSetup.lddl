@@ -29,8 +29,8 @@ new File('.').eachFileRecurse(FILES) {
             sqlStoredproc = it.getAbsolutePath()
     }
 }
-sql new File(sqlIndices).text
-sql new File(sqlStoredproc).text
+// sql new File(sqlIndices).text
+// sql new File(sqlStoredproc).text
 
 //sql new File('create_indices.sql').text
 //sql new File('create_storedproc.sql').text
