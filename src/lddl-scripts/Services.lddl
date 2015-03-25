@@ -1,26 +1,27 @@
 /*
  * A modular LDDL script for configuring the LAPPS services available on the 
  * ANC/Vassar service node.
+ *
+ * @deprecated
  */
-
-/**
-
-include 'services/Datasources'
-include 'services/Datasources.1.3.0'
-include 'Converters'
-include 'services/Converters.0.1.0'
-include 'services/ServicesGate'
-include 'services/ServicesOpenNLP'
-include 'services/ServicesStanford'
-include 'Users'
-
-**/
 
 include 'Servers'
 
-include 'services/brandeis/ServicesOpenNLP'
-include 'services/brandeis/ServicesStanford'
-
+//include 'services/Datasources'
+include 'services/Datasources1.3.0'
+include 'services/Datasources1.4.0'
+//include 'Converters'
+//include 'services/Converters0.2.0'
+//include 'services/Converters0.3.0'
+include 'services/Converters0.3.1'
+//include 'services/Gate'
+//include 'services/Gate1.2.0'
+include 'services/Gate1.3.1'
+//include 'services/GateApplications1.2.0'
+include 'services/OpenNLP'
+//include 'services/Stanford'
+//include 'services/Stanford1.2.0'
+include 'services/Stanford1.3.0'
 include 'Users'
 
-news 'Services have been configured via LDDL'
+news 'The ANC LAPPS services have been configured via LDDL'

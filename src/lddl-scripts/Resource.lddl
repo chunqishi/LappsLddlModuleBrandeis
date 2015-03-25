@@ -31,15 +31,6 @@ resourceMetaAttribute {
 }
 
 resourceType {
-    id 'resource.type.null'
-    name 'The NULL resource type'
-    domain DOMAIN
-    description "A type for resources that do not require a type."
-    attributes LANG, SIZE, UNIT
-}
-
-
-resourceType {
 	id 'resource.type.corpus'
 	name 'Corpus'
 	domain DOMAIN
@@ -63,5 +54,12 @@ resourceType {
 	attributes LANG, SIZE, UNIT
 }
 
+resourceType {
+    id 'resource.type.null'
+    name 'The NULL resource type'
+    domain DOMAIN
+    description "A type for resources that do not require a type."
+    attributes LANG, SIZE, UNIT
+}
 
 news 'LAPPS resources have been registered.'

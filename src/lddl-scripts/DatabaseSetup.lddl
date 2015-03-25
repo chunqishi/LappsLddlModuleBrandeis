@@ -12,15 +12,16 @@ include 'Common'
 include 'Database'
 
 
+/**
+ *  You may running in the parent directory.
+ *  Then it try to find this file if it located in the subdirectory.
+ **/
 sqlIndices='create_indices.sql'
 sqlStoredproc='create_storedproc.sql'
 
-
-
-// println new File('.').getAbsolutePath()
 import static groovy.io.FileType.FILES
+// search files under current directory.
 new File('.').eachFileRecurse(FILES) {
-    // println it.name
     if(it.name.endsWith(sqlIndices)) {
         sqlIndices = it.getAbsolutePath()
     }
@@ -28,8 +29,9 @@ new File('.').eachFileRecurse(FILES) {
             sqlStoredproc = it.getAbsolutePath()
     }
 }
-
 sql new File(sqlIndices).text
 sql new File(sqlStoredproc).text
 
+//sql new File('create_indices.sql').text
+//sql new File('create_storedproc.sql').text
 comment "Index and stored procedure have been created."

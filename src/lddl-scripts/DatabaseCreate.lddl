@@ -8,12 +8,11 @@
 
 // Connect as the PostgreSQL superuser since we need to drop
 // an entire database.
+
 if (args.username == null || args.password == null) {
    println "Please provide a username and password to use."
-   args.username='postgres'
-   args.password='postgres'
+   return
 }
-
 
 postgres {
     url 'jdbc:postgresql://localhost'
@@ -21,30 +20,27 @@ postgres {
     password args.password
 }
 
-database='langrid'
-rolename='langrid'
-password='langrid'
-
-
 comment 'Dropping the existing database.'
-sql "drop database if exists ${database}"
+sql 'drop database if exists langrid'
 
-
-// Create Role if not exist
-
-def create_role = """
-DROP ROLE IF EXISTS ${rolename};
-CREATE ROLE ${rolename} WITH CREATEDB LOGIN PASSWORD '${password}';
-"""
-comment 'Creating the role.'
-sql create_role
 
 // The SQL required to create the database.
 def create_stmt = """
-CREATE DATABASE ${database}
-  WITH OWNER = ${rolename}
+CREATE DATABASE langrid
+  WITH OWNER = langrid
        ENCODING = 'UTF8'
        TABLESPACE = pg_default
+       CONNECTION LIMIT = -1;
+"""
+
+// The original create statement.
+def old_create_stmt = """
+CREATE DATABASE langrid
+  WITH OWNER = langrid
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'C'
+       LC_CTYPE = 'C'
        CONNECTION LIMIT = -1;
 """
 

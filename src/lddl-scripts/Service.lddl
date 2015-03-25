@@ -12,6 +12,7 @@ serviceMetaAttribute {
 	id LANG
 	name 'Service language'
 	domain DOMAIN
+	//type SERVICE
 	type SERVICE
 	description 'The language(s) the service is able to process.'
 }
@@ -24,6 +25,7 @@ serviceMetaAttribute {
 	description 'The type of service (POS tagger, sentence splitter, etc.)'
 }
 
+/*
 serviceType {
 	id DATASOURCE
 	name 'LAPPS Datasource'
@@ -39,7 +41,7 @@ serviceType {
 	description 'LAPPS web services.'
 	attributes LANG, TYPE
 }
-
+*/
 
 /**
 sql """

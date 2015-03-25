@@ -1,7 +1,20 @@
-include 'Servers'
+/*
+ * This script permits individual services to be updated (Gate, Stanford, etc.)
+ * while still allowing the user to specify the version and/or server
+ * to be used.
+ */
+ 
+COPYRIGHT = "Copyright 2014, Brandeis University"
 
-/* Each institution should set their own copyright notice. */
-COPYRIGHT = 'Copyright 2014, Brandeis University'
-MASC_ID = 'MASC-3.0.0'
-include 'services/brandeis/ServicesOpenNLP'
-include 'services/brandeis/ServicesStanford'
+if (args.size() == 0) {
+	println "No module(s) specified."
+	System.exit(1)
+}
+
+
+args.each { module, ignored ->
+	if ('version' != module && 'server' != module) {
+		println "Updating ${module}"
+		include module
+	}
+}
