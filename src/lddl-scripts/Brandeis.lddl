@@ -19,22 +19,10 @@ COPYRIGHT = 'Copyright 2014 Brandeis University'
 // service types, and meta-attribues.
 include 'Setup'
 
-// Definitions of the MASC DataSource services
-// include 'vassar/MASC'
-
 // Definitions of the processing services available at Brandeis University.
 include 'services/brandeis/Resource'
-include 'services/brandeis/ServicesOpenNLP#2.0.0'
-include 'services/brandeis/ServicesStanford#2.0.0'
-
-// Definitions of the MASC DataSource services
-// include 'services/vassar/MASC'
-
-// Definitions of the processing services available at Vassar.
-// include 'services/vassar/Datasources1.4.2'
-// include 'services/vassar/Converters0.4.0'
-// include 'services/vassar/Gate1.3.5'
-// include 'services/vassar/Stanford1.4.0'
+include 'services/brandeis/ServicesOpenNLP2.0.0'
+include 'services/brandeis/ServicesStanford2.0.0'
 
 include 'Users'
 
