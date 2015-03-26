@@ -30,14 +30,14 @@ new File('.').eachFileRecurse(FILES) {
     }
 }
 
-comment "---------------------"
-comment sqlIndices
-comment new File(sqlIndices).text
+// comment "---------------------"
+// comment sqlIndices
+// comment new File(sqlIndices).text
 sql new File(sqlIndices).text
 
-comment "---------------------"
-comment sqlStoredproc
-comment new File(sqlStoredproc).text
+// comment "---------------------"
+// comment sqlStoredproc
+// comment new File(sqlStoredproc).text
 sql new File(sqlStoredproc).text
 
 //sql new File('create_indices.sql').text

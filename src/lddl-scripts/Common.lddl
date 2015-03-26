@@ -13,12 +13,12 @@ DOMAIN = 'lapps.nlp'
  *   2. processing services
  *
  * @deprecated: each service now has its own service type
- * and service interface defined automatically.  
+ * and service interface defined automatically.
  * See the register_* functions Functions.lddl
  *
  */
-//SERVICE = 'service.type.processor'
-//DATASOURCE = 'service.type.datasource'
+SERVICE = 'service.type.processor'
+DATASOURCE = 'service.type.datasource'
 
 /*
  * Resource types
@@ -36,4 +36,3 @@ NONE_ID = 'resource.id.none'
 /* License types. This list is by no means exhaustive. */
 APACHE = 'Apache 2.0'
 GPL = 'GPL'
-
